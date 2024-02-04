@@ -65,10 +65,10 @@ def main():
             hotel_dict = {}
             hotel_dict['hotel'] = hotel.locator('//div[@data-testid="title"]').inner_text()
             hotel_dict['town'] = hotel.locator('//span[@data-testid="address"]').inner_text()
-            hotel_dict['price'] = hotel.locator('//span[@data-testid="price-and-discounted-price"]').inner_text()
-            hotel_dict['score'] = hotel.locator('//div[@data-testid="review-score"]').inner_text()
+            hotel_dict['price(USD$)'] = hotel.locator('//span[@data-testid="price-and-discounted-price"]').inner_text().replace('US$', '')
+            hotel_dict['score'] = hotel.locator('//div[@data-testid="review-score"]/div[1]').inner_text()
             hotel_dict["review"] = hotel.locator('//div[@data-testid="review-score"]/div[2]/div[1]').inner_text()
-            hotel_dict["reviews count"] = hotel.locator('//div[@data-testid="review-score"]/div[2]/div[2]').inner_text()
+            hotel_dict["reviews count"] = hotel.locator('//div[@data-testid="review-score"]/div[2]/div[2]').inner_text().replace(' reviews', '')
 
             hotel_list.append(hotel_dict)
 
