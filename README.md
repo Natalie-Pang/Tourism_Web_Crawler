@@ -10,6 +10,10 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all req
 pip install -r requirements.txt
 ```
 
+``` bash
+playwright install chromium
+```
+
 # Usage
 ## Attraction Crawler Usage
 This script gathers information about attractions in various cities using data from [tripadvisor.com](doc:linking-to-pages#anchor-links).
