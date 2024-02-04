@@ -1,0 +1,11 @@
+typing_extensions
+pandas
+et-xmlfile
+greenlet
+numpy
+openpyxl
+playwright
+pyee
+python-dateutil
+pytz
+six
