@@ -45,9 +45,10 @@ def main():
         page.goto(page_url)
 
         page_counter = 0
+        max_page = 5
         attraction_list = []
 
-        while page_counter < 5:
+        while page_counter < max_page:
             time.sleep(10)
             attractions = page.locator('.jemSU article.GTuVU').all()
 
